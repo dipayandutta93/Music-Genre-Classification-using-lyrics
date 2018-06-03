@@ -89,7 +89,7 @@ A summarization of the results is demonstrated in the figure. We tested for with
 
 The results of binary classification were better, which helped us in analysing the problem in even more detail. We identified that using the words in the lyrics, Hip Hop genre was most accurately labeled as compared to the rest of the genres.
 
-![image](https://user-images.githubusercontent.com/32987993/40891950-6d62545a-675d-11e8-8cbf-929610845c8d.png)
+![image](https://user-images.githubusercontent.com/32987993/40892152-89aed86a-6760-11e8-8267-f165094157dd.png)
 
 #### Model III
 
