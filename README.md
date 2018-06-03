@@ -16,5 +16,8 @@ The dataset for this problem was not abundant mostly due to copyright issues. Ho
 
 After preprocessing we analysed the data and identified the features of data which is the first step of any machine learning problem. We used Spark to analyse the data and visualized the data. This analysis helped us understand the features of the data that would be most useful for the task in our hand. We evaluated the average length of lyrics in each genre, and we had an interesting insight, Hip-Hop songs were longer as compared to the other genres. And the rest of the genres had almost similar lengths. Then we calculated the average number of unique words in each genre. (Figure 1) Here as well we found out that Hip-Hop songs had more unique words as compared to the rest. Then we calculated the most common words of each genre. (Figure 2) This would help us understand any correlation between the words used in lyrics and the genre type.
 
+![image](https://user-images.githubusercontent.com/32987993/40891455-d79d4564-6753-11e8-8287-fac13dbf90e4.png)
+
+
 
 
