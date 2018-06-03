@@ -42,5 +42,24 @@ Next, we used the word vectors (word2vec) to represent our lyrical text. These s
 
 With our features and labels ready we fed them into a classier and trained it. We used 4:1 split of the dataset for training and testing. We used python's sci-kit learn library to implement the following algorithms: 
 
-Naive Bayes: Implemented Bernoulli and Multinomial Naive Bayes, Support Vector Machine: Used the linear kernel, Logistic Regression, Decision Tree, Random Forest: Used 100 trees and the majority of all the classications are the result, MultiLayer Perceptron Model: Experimented with various activation functions and hidden layers.
+Naive Bayes: Implemented Bernoulli and Multinomial Naive Bayes, Support Vector Machine: Used the linear kernel, Logistic Regression, Decision Tree, Random Forest: Used 100 trees and the majority of all the classifications are the result, MultiLayer Perceptron Model: Experimented with various activation functions and hidden layers, Extra Trees Classifier: Used this algorithm to test with word2vec feature vectors, Extra Trees Classier: Used this algorithm to test with
+word2vec feature vectors.
 
+#### Model II
+
+We converted the problem into a binary classification problem and developed a classifier which will identify a song as Rock or Non Rock, Hip-Hop or Non Hip-Hop. We did this to identify the genres which are more distinguishable from the rest on the basis of the content of its songs.
+
+##### Features
+
+We divided the data into two groups for each of the genre classes, like grouping dataset into rock and non-rock, hip- hop and non hip-hop etc. We used one hot encoding to represent the class labels and used term frequency-inverse document frequency to represent the features. We implemented this model to identify the genres which were easily classified as compared to the rest.
+
+#### Model III
+
+We used a Convolutional Neural Network to classify the songs into their respective genres. We used pre-trained glove vectors for this model.
+
+##### Description of the model
+The glove model we used is Google Glove 6B vector 100d. We have implemented two CNN models using Keras library:
+i. Simple convolution model: We have implemented a single layer of convoluted and maxpool layer.
+ii. Dense convolution model: We have implemented multiple convoluted and maxpool layers with filter sizes of 3, 4 and 5.(Figure 3)
+
+![image](https://user-images.githubusercontent.com/32987993/40891825-88c3bdea-675a-11e8-91ca-80867925c45b.png)
