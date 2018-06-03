@@ -94,7 +94,7 @@ The results of binary classification were better, which helped us in analysing t
 #### Model III
 
 We ran the model multiple number of times, changing the following parameters:
- learning rate: Modified the learning rate from 1 to 10<sup>-7</sup>
+* Item 1 learning rate: Modified the learning rate from 1 to 10<sup>-7</sup>
  adjusting the dropout: Adjusted the dropout layers and
 modified its values
  modifying the filter sizes: Used filters of sizes 3,4 and 5
