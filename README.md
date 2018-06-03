@@ -95,14 +95,16 @@ The results of binary classification were better, which helped us in analysing t
 
 We ran the model multiple number of times, changing the following parameters:
 * learning rate: Modified the learning rate from 1 to 10<sup>-7</sup>
-* adjusting the dropout: Adjusted the dropout layers and
-modified its values
+* adjusting the dropout: Adjusted the dropout layers and modified its values
 * modifying the filter sizes: Used filters of sizes 3,4 and 5
-* Increasing the number of epochs Providing enough time
-for the model to learn
+* Increasing the number of epochs: Providing enough time for the model to learn
 * Increasing batch size: Tried batch sizes of 32,64 and 128
 
 In the simple convolutional neural network we could achieve an accuracy of 69.2% and in the dense model we could achieve an accuracy of 71%. Both were run for over a hundred epochs. This is a significant development as compared to the previous two models.
 
 ![image](https://user-images.githubusercontent.com/32987993/40891985-e902ca4a-675d-11e8-8bac-1a114d8f4e85.png)
+
+### Conclusions and Future Work
+
+From the models that we developed and the experiments that we conducted we can say that the Convolutional Neural Network Model performed significantly well compared to the other models. However, the training time for an CNN is very high even though pre-trained word embeddings were used as feature vectors. In that respect Multi Layer Perceptron, SVM and Random Forest perform well. Apart from Hip- Hop(as seen from the confusion matrix) other genres might be mislabeled at times. Accordingly, the user interface works quite well for hip-hop genre lyrics. However limited by time, we could produce some significant results in the field of music genre classification based on lyrics. There is a lot that can be done like better pre-processing of data. Adding more data for each of genre classes. We might train a model with lyrics as well as audio features and it is expected that we can get better results. Also, we might train a more complex model which would remember order of words like an LSTM, and we can exper- iment on our training data. Classification by lyrics will always be inherently  awed by vague genre boundaries with many genres borrowing lyrics and styles from one another. For example one merely need consider cover songs which utilise the same lyrics but pro- duce songs in vastly different genres, songs which have no lyrical content. To produce a state of the art classifier is is evident that this classifier must take into account more than just the lyrical content of the song. Audio data typi- cally performs the strongest and further research could look into employing these models to the audio and symbolic data and combining with the lyrics to build a stronger classifier.
 
