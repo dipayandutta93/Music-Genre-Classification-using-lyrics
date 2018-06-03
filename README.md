@@ -94,13 +94,13 @@ The results of binary classification were better, which helped us in analysing t
 #### Model III
 
 We ran the model multiple number of times, changing the following parameters:
-* Item 1 learning rate: Modified the learning rate from 1 to 10<sup>-7</sup>
- adjusting the dropout: Adjusted the dropout layers and
+* learning rate: Modified the learning rate from 1 to 10<sup>-7</sup>
+* adjusting the dropout: Adjusted the dropout layers and
 modified its values
- modifying the filter sizes: Used filters of sizes 3,4 and 5
- Increasing the number of epochs Providing enough time
+* modifying the filter sizes: Used filters of sizes 3,4 and 5
+* Increasing the number of epochs Providing enough time
 for the model to learn
- Increasing batch size: Tried batch sizes of 32,64 and 128
+* Increasing batch size: Tried batch sizes of 32,64 and 128
 
 In the simple convolutional neural network we could achieve an accuracy of 69.2% and in the dense model we could achieve an accuracy of 71%. Both were run for over a hundred epochs. This is a significant development as compared to the previous two models.
 
