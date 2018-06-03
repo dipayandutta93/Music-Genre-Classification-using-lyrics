@@ -31,6 +31,16 @@ We used term frequency and inverse document frequency as our feature vectors and
 This is one of the most common approaches in text retrieval. Here, any unique term occurring in any of the
 document of the collection is regarded as a feature. One simple approach is to count the frequency of the word in
 the entire lyrical text. Another approach is term weighting scheme based on the importance of a term to describe and discriminate between documents, such as the popular tf - idf (term frequency times inverse document frequency) weighting scheme. In this model, a document is denoted by d, a term (token) by t, and the number of documents in a corpus by N. The term frequency tf(t, d) denotes the number of times term t appears in document d. The number of documents in the collection that term t occurs in is denoted as document frequency df(d). The tf-idf weight of a term in a document is computed as:
-tf x idf(t, d) = tf (t, d) x ln(N/df(t))
+##### tf x idf(t, d) = tf (t, d) x ln(N/df(t))
 We have also normalized the vector after applying the Count Vectorizer and Tf-Idf Weighing scheme.
+
+##### Word2Vec
+
+Next, we used the word vectors (word2vec) to represent our lyrical text. These semantic vectors preserve most of the relevant information in a text while having relatively low dimensionality. Word2Vec is an algorithm that takes every word in your vocabulary that is, the text that needs to be classied is turned into a unique vector that can be added, subtracted, and manipulated in other ways just like a vector in space. We trained word vectors using python's genism library. We generated 100-dimensional word2vec embedding trained on the benchmark data itself.
+
+##### Algorithms
+
+With our features and labels ready we fed them into a classier and trained it. We used 4:1 split of the dataset for training and testing. We used python's sci-kit learn library to implement the following algorithms: 
+
+Naive Bayes: Implemented Bernoulli and Multinomial Naive Bayes, Support Vector Machine: Used the linear kernel, Logistic Regression, Decision Tree, Random Forest: Used 100 trees and the majority of all the classications are the result, MultiLayer Perceptron Model: Experimented with various activation functions and hidden layers.
 
