@@ -58,8 +58,51 @@ We divided the data into two groups for each of the genre classes, like grouping
 We used a Convolutional Neural Network to classify the songs into their respective genres. We used pre-trained glove vectors for this model.
 
 ##### Description of the model
+
 The glove model we used is Google Glove 6B vector 100d. We have implemented two CNN models using Keras library:
 i. Simple convolution model: We have implemented a single layer of convoluted and maxpool layer.
 ii. Dense convolution model: We have implemented multiple convoluted and maxpool layers with filter sizes of 3, 4 and 5.(Figure 3)
 
 ![image](https://user-images.githubusercontent.com/32987993/40891825-88c3bdea-675a-11e8-91ca-80867925c45b.png)
+
+#### User Interface
+
+After training our models, we designed an user interface, when a user can enter the lyrics of a song and our program would predict the genre of the song.
+
+![image](https://user-images.githubusercontent.com/32987993/40891838-e31f95de-675a-11e8-8397-d8210a1afa1a.png)
+
+### Results
+
+Now we report the results of experiments on these models on a dataset of 25000 songs equally distributed among all the genres.
+
+#### Model I
+
+A summarization of the results is demonstrated in the figure. We tested for with both TF-IDF vectors and counts as our feature vectors. We observe that TF-IDF vectors are better representation of the words in the lyrics. And among the algorithms, Multi Layer Perceptron performed better than the other algorithms with an overall accuracy of 63.5% accuracy. SVM comes close second with 61.9% accuracy. The confusion matrix shows that Hip-Hop is most accurately classified and Jazz is mislabeled most of the times. Then, we used word2vec as our feature vector, and applied the Extra Trees Classifier and Support Vector Machines, and we observed accuracy of 60.3% and 62.4%. Hence the use of word2vec did not produce significant improvement in our problem.
+
+![image](https://user-images.githubusercontent.com/32987993/40891913-7339e72c-675c-11e8-992c-3e574d73c2ec.png)
+
+![image](https://user-images.githubusercontent.com/32987993/40891959-8d956d84-675d-11e8-9d03-c200a3467b58.png)
+
+![image](https://user-images.githubusercontent.com/32987993/40891972-bccdcbf0-675d-11e8-9c14-f1ddd28017c1.png)
+
+#### Model II
+
+The results of binary classification were better, which helped us in analysing the problem in even more detail. We identified that using the words in the lyrics, Hip Hop genre was most accurately labeled as compared to the rest of the genres.
+
+![image](https://user-images.githubusercontent.com/32987993/40891950-6d62545a-675d-11e8-8cbf-929610845c8d.png)
+
+#### Model III
+
+We ran the model multiple number of times, changing the following parameters:
+ learning rate: Modified the learning rate from 1 to 10<sup>-7</sup>
+ adjusting the dropout: Adjusted the dropout layers and
+modified its values
+ modifying the filter sizes: Used filters of sizes 3,4 and 5
+ Increasing the number of epochs Providing enough time
+for the model to learn
+ Increasing batch size: Tried batch sizes of 32,64 and 128
+
+In the simple convolutional neural network we could achieve an accuracy of 69.2% and in the dense model we could achieve an accuracy of 71%. Both were run for over a hundred epochs. This is a significant development as compared to the previous two models.
+
+![image](https://user-images.githubusercontent.com/32987993/40891985-e902ca4a-675d-11e8-8bac-1a114d8f4e85.png)
+
